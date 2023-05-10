@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <form name="myForm" onsubmit="submitEvent()">
+    Enter you name: <input type="text" id="c_name" name="c_name" /><br /><br />
+    Enter age: <input type="text" name="c_age" id="c_age" /><br /><br />
+    Gender: <input type="radio" id="r1" name="gender" />Male
+    <input type="radio" id="r2" name="gender" />Female <br /><br />
+    Contact no: <input type="text" name="c_n" id="c_n" /> <br /><br />
+    Email: <input type="text" name="c_e" id="c_e" /> <br /><br />
+    <input type="submit" id="submit" value="Submit" onclick="validate()" />
+  </form>
+  <body>
+    <script>
+      function validate() {
+        var name = document.myForm.c_name.value;
+        var age = document.myForm.c_age.value;
+        var e_id = document.myForm.c_e.value;
+        var c_no = document.myForm.c_n.value;
+        if (name == "" || age == "" || e_id == "" || c_no == "") {
+          alert("Enter all the details!");
+        } else if (
+          name < 48 ||
+          (name > 57 && name < 65) ||
+          (name > 90 && name < 97) ||
+          name > 122
+        ) {
+          alert("Enter character only");
+        } else if (age >= 100 || age <= 10 || isNaN(age)) {
+          alert("Enter valid age");
+        } else if (c_no.length != 10) {
+          alert("Enter valid Contact number");
+        } else alert("Values entered successfully");
+      }
+    </script>
+  </body>
+</html>

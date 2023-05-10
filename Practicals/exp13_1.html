@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>20461 Practical</title>
+</head>
+<body>
+    <img src="Micro Project/close.ico" onmouseover="big()" onmouseout="small()" id="img1" width="200px" height="200px">
+    <p id="myData"></p>
+    <script>
+        function big() {
+            document.getElementById('img1').style.height = "250px"
+            document.getElementById('img1').style.width = "250px"
+            document.getElementById('myData').innerHTML = "On mouse over."
+        }
+        function small() {
+            document.getElementById('img1').style.height = "150px"
+            document.getElementById('img1').style.width = "150px"
+            document.getElementById('myData').innerHTML = "On mouse out."
+        }
+    </script>
+</body>
+</html>

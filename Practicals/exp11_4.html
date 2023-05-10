@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>20461 Practical</title>
+    <style>
+        body {
+            width: 5000px;
+            height: 7500px;
+        }
+    </style>
+</head>
+<body>
+    <h4>(20461) Siddiqui Mamoon</h4><hr>
+    <input type="button" value="SIZE AT" id="btn1" onclick="SizeAtfunction()" />
+    <input type="button" value="SIZE BY" id="btn2" onclick="SizeByfunction()" /><br>
+    <input type="button" value="MOVE AT" id="btn3" onclick="MoveAtfunction()" />
+    <input type="button" value="MOVE BY" id="btn4" onclick="MoveByfunction()" /><br>
+    <input type="button" id="btn5" value="SCROLL TO" onclick="scrollWin(0,-50)" />
+    <input type="button" id="btn6" value="SCROLL BY" onclick="scrollWin1(0,50)" /><br>
+    <input type="button" value="OPEN" id="btn8" onclick="WinOpen()" />
+    <input type="button" value="CLOSE" id="btn7" onclick="Closefunction()" />
+    <script>
+        var newwin1;
+        function WinOpen() {
+            newwin1 = window.open("", "Window", "width=500,height=200,scrollbars=1");
+            newwin1.document.write("This is window" + "<br>");
+            newwin1.focus();
+        }
+        function SizeAtfunction() {
+            newwin1.resizeTo(200, 50);
+            newwin1.document.write("This is window is SizedTo()" + "<br>");
+            newwin1.focus();
+        }
+        function SizeByfunction() {
+            newwin1.resizeBy(200, 50);
+            newwin1.document.write("This is window is SizedBy()" + "<br>");
+            newwin1.focus();
+        }
+        function Closefunction() {
+            newwin1.close();
+        }
+        function MoveAtfunction() {
+            newwin1.moveTo(200, 50);
+            newwin1.document.write("This is window is MovedTo()" + "<br>");
+            newwin1.focus();
+        }
+        function MoveByfunction() {
+            newwin1.moveBy(300, 500);
+            newwin1.document.write("This is window is MovedBy()" + "<br>");
+            newwin1.focus();
+        }
+        function scrollWin() {
+            newwin1.scrollTo(300, 300);
+            newwin1.document.write("This is window is ScrollTo()" + "<br>");
+            newwin1.focus();
+        }
+        function scrollWin1() {
+            newwin1.scrollBy(0, -50);
+            newwin1.document.write("This is window is ScrollBy()" + "<br>");
+            newwin1.focus();
+        }
+    </script>
+</body>
+</html>

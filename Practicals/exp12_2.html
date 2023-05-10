@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+</body>
+<h4>(20462) Siddiqui Saad</h4><hr>
+    IP: <input type="text" id="myIP" onblur="validateIP()" size="30" />
+<script>
+    function validateIP() {
+        var ip = document.getElementById("myIP").value
+        var regex = /^(0[1-9]|1[0-9]|2(0-5)|25(0-5).)(0[1-9]|1[0-9]|2(0-5)|25(0-5).){(0[1-9]|1[0-9]|2(0-5)|25(0-5).)(0[1-9]|1[0-9]|2(0-5)|25(0-5).)$/
+        if (regex.test(ip) == true) {
+            alert('Successful')
+        } else {
+            alert('Invalid IP')
+        }
+    }</script>
+</html>

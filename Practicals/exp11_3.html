@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>20461 Practical</title>
+</head>
+<body>
+    <h4>(20461) Siddiqui Mamoon</h4><hr>
+    <input type="button" id="btn1" value="Try" onclick="getLocation()" />
+</body>
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            }
+            else {
+                alert("GeoLocation is not supported by this browser");
+            }
+        }
+        function showPosition(position) {
+            document.write("Latitude:" + position.coords.latitude + "<br>Longitude:" + position.coords.longitude);
+        }
+    </script>
+</html>

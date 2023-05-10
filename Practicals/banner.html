@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>20461 Practical</title>
+    </head>
+    <body onload="Banner()">
+	<h4>(20462) Siddiqui Saad</h4><hr>
+        <h3>Banner: </h3>
+       <center><img src="Micro Project/MP/dog-10.jpg" name="banner1"></center>
+        <script>
+            myBanner = ["Micro Project/MP/dig.jpg", "Micro Project/MP/dog-9.jpg"];
+            banner = 0;
+            function Banner() {
+                if (document.images) {
+                    banner++;
+                    if(banner==myBanner.length) {
+                        banner=0;
+                    }
+                    document.banner1.src = myBanner[banner];
+                    setTimeout("Banner()", 1000);
+                }
+            }
+        </script>
+    </body>
+</html>

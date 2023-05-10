@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>20461 Practical</title>
+    <script>
+        document.write("(20461) Siddiqui Mamoon<hr>");
+        var x = history.length;
+        document.write("Number of URL in history: "+x);
+        function goBack() {
+            window.history.forward();
+        }
+        function goForward() {
+            window.history.forward();
+        }
+        function goBack() {
+            window.history.go(-2);
+        }
+    </script>
+</head>
+<body><br><br>
+    <button onclick="goBack()">Go Back</button>
+    <button onclick="goForward()">Go Forward</button>
+    <button onclick="goBack()">Go 2 pages back</button>
+    <form name="f1" action="">
+        <a href="https://www.youtube.com/">
+            <p id="d1">Locate to Youtube</p>
+        </a>
+    </form>
+</body>
+</html>

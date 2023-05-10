@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <form name="myForm">
+        Name: &nbsp; <input type="text" id="name"><br><br>
+        Age: &nbsp; <input type="text" id="age"><br><br>
+        Date of Birth: &nbsp; <input type="text" id="dob"><br><br>
+        E-mail ID: &nbsp; <input type="text" id="email"><br><br>
+        Password: &nbsp; <input type="text" id="password"><br><br>
+        <input type="button" value="Check" onclick="validateName(); validateAge(); validateDOB(); validateEmail(); validatePassword()">
+    </form>
+</body>
+<script>
+    function validateName() {
+        var regex = /^[a-zA-Z\s]{2,30}$/;
+        var name = document.getElementById("name").value;
+        if(regex.test(name)) {} 
+        else {
+            alert("Name should not contain special character or digits.");
+        }
+    }
+    function validateAge(){
+        var regex = /^(0?[1-9]|[1-9][0-9])$/;
+        var age = document.getElementById("age").value;
+        if(regex.test(age) && age >= 18) {} 
+        else {
+            alert("Age should be in between 18 and 99");
+        }
+    }
+    function validateDOB(){
+        var regex = /^(0[1-9]|[12][1-9]|3[01])[./-](0[1-9]|1[012])[./-](19|20)\d\d$/;
+        var dob = document.getElementById("dob").value;
+        if(regex.test(dob)) {} 
+        else {
+            alert("Formats: dd-mm-yyyy, dd/mm/yyy, dd.mm.yyyy");
+        }
+    }  
+    function validateEmail(){
+        var regex = /^\S+@\S+.\S$/
+        var email = document.getElementById("email").value;
+        if(regex.test(email)) {} 
+        else {
+            alert("Invalid E-mail...");
+        }
+    }  
+    function validatePassword(){
+        var regex = /^[A-Z]|[a-z][0-9]$/;
+        var password = document.getElementById("password").value;
+        if(regex.test(password)) {} 
+        else {
+            alert("Must contain atleast 1 uppercase, 1 lowercase, 1 digit, 1 special-character and length between 6-16");
+        }
+    }      
+</script>
+</html>

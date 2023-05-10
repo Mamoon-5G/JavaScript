@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>Compute the average marks and grade</title>
+  </head>
+  <body>
+    <script>
+      var students = [
+        ["Summit", 80],
+        ["Kalpesh", 77],
+        ["Amit", 88],
+        ["Tejas", 93],
+        ["Abhishek", 65],
+      ];
+      var Avgmarks = 0;
+      for (var i = 0; i < students.length; i++) {
+        Avgmarks += students[i][1];
+      }
+      var avg = Avgmarks / students.length;
+      document.write("Average grade: " + avg);
+      document.write("<br>");
+      if (avg < 60) {
+        document.write("Grade : E");
+      } else if (avg < 70) {
+        document.write("Grade : D");
+      } else if (avg < 80) {
+        document.write("Grade : C");
+      } else if (avg < 90) {
+        document.write("Grade : B");
+      } else if (avg < 100) {
+        document.write("Grade : A");
+      }
+    </script>
+  </body>
+</html>

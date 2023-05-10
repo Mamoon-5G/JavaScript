@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>20461 Practical</title>
+	<script>
+		var scrollpos = 0, maxScroll = 200, blanks = "";
+		function scrolltext(text, sec) {
+			window.setInterval(function () {
+				document.getElementById("show").innerHTML = blanks + text;
+				++scrollpos;
+				blanks = blanks + "&nbsp";
+				if (scrollpos > maxScroll) {
+					scrollpos = 0;
+					blanks = "";
+				}
+			}, sec);
+		}</script>
+</head>
+<body onload="scrolltext('Rolling Ball ⚽',500)">
+	<p id="show"></p>
+</body>
+</html>

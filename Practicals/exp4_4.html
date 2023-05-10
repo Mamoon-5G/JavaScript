@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>20461 Practical</title>
+</head>
+
+<body>
+    <script>
+        document.write("20461 Siddiqui Mamoon<hr>");
+        var number = {
+            armstrong: (num) => {
+                var temp = num, arm = 0, rem;
+                while (temp > 0) {
+                    rem = parseInt(temp % 10);
+                    temp = parseInt(temp / 10);
+                    arm = arm + (rem * rem * rem);
+                }
+                if (num == arm) {
+                    document.write(x+" is an armstrong number!");
+                }
+                else
+                    document.write(x+" is not an armstrong number!")
+            }
+        };
+        var x = prompt("Enter a number");
+        number.armstrong(x);
+
+    </script>
+</body>
+
+</html>

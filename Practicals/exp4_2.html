@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>20461 Practical</title>
+</head>
+<body>
+    <script>
+        document.write("20461 Siddiqui Mamoon<hr>");
+        reverse = (num) => {
+            var temp = num;
+            var n = 0, rev = 0;
+            while (num > 0) {
+                n = num % 10;
+                num = parseInt(num / 10);
+                rev = (rev * 10) + n;
+            }
+            document.write("Original Number: " + temp);
+            document.write("<hr>Reversed Number: " + rev+"<hr>");
+        }
+        var num = prompt("Enter a Number: ");
+        reverse(num);
+    </script>
+</body>
+</html>

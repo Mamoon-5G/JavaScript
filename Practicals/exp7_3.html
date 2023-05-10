@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>20461 Practical</title>
+</head>
+<body>
+    <form name="form1">
+        20461 Siddiqui Mamoon <hr>
+        Name Attribute: <input type="text" name="text1">
+        <input type="button" value="setAttribute" id="btn1" onclick="clickEvent()"><br>
+        <script>
+            function clickEvent() {
+                var a = document.getElementById("btn1");
+                if (a.value == "setAttribute") {
+                    a.setAttribute("name", "Siddiqui");
+                    a.setAttribute("value", "removeAttribute");
+                } else if (a.value == "removeAttribute") {
+                    a.removeAttribute("name");
+                    a.setAttribute("value", "setAttribute");
+                }
+                document.form1.text1.value = escape(a.getAttribute("name"));
+            }
+        </script>
+    </form>
+</body>
+</html>

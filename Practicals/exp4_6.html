@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>20461 Practical</title>
+</head>
+<body>
+    <script>
+        document.write("20461 Siddiqui Mamoon<br><hr>");
+        function Fibonacci(x, y) {
+            this.var1 = x;
+            this.var2 = y;
+            this.fibo = () => {
+                var var3;
+                var num = parseInt(prompt("Enter the Number:"));
+                document.write("Fibonacci Series of "+num+" is: " + this.var1 + " " + this.var2 + " ");
+                for (var i = 3; i <= num; i++) {
+                    this.var3 = this.var1 + this.var2;
+                    this.var1 = this.var2;
+                    this.var2 = this.var3;
+                    document.write(this.var3 + " ");
+                }
+            };
+        }
+        var f1 = new Fibonacci(0, 1);
+        f1.fibo();
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>20461 Practical</title>
+    <style>
+        .dropDown {
+            display: inline-block;
+            position: relative;
+        }
+        .btn {
+            display: block;
+            position: relative;
+            background-color: black;
+            color: white;
+            padding: 10px 16px;
+            font-size: 16px;
+        }
+        .dropDown:hover .btn {
+            background-color: grey;
+        }
+        .dropDownContent {
+            display: none;
+        }
+        .dropDownContent a {
+            display: block;
+            text-decoration: none;
+            color: rgb(240, 114, 114);
+            padding: 8px 12px;
+            font-size: 12px;
+        }
+        .dropDownContent a:hover {
+            background-color: rgb(230, 230, 230);
+        }
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<h4>(20461) Siddiqui Mamoon</h4><hr>
+<body>
+    <div id="dropDown" class="dropDown">
+        <button id="btn" class="btn" onclick="onClick()">DropDown</button>
+        <div id="dropDownContent" class="dropDownContent">
+            <input type="text" placeholder="Search" id="input" onkeyup="filter()">
+            <a href="#">About</a>
+            <a href="#">Blog</a>
+            <a href="#">Base</a>
+            <a href="#">Contact</a>
+            <a href="#">Info</a>
+            <a href="#">Others</a>
+        </div>
+    </div>
+    <script>
+        function onClick() {
+            document.getElementById("dropDownContent").classList.toggle("show");
+        }
+        function filter() {
+            var input, filter, div, a, i, txtValue;
+            input = document.getElementById("input");
+            filter = input.value.toUpperCase();
+            a = document.getElementById("dropDownContent").getElementsByTagName("a");
+            for (i = 0; i < a.length; i++) {
+                txtValue = a[i].textContent || a[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    a[i].style.display = "";
+                } else {
+                    a[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

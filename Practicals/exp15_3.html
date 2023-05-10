@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>20461 Practical</title>
+</head>
+<body>
+	<script>
+		document.write("(20461) Siddiqui Mamoon<hr>")
+		function protect_email(useremail) {
+			var avg, part1, part2;
+			splitted = useremail.split("@");
+			part1 = splitted[0];
+			part2 = splitted[1];
+			avg = part1.length / 2;
+			part1 = part1.substring(0, (part1.length - avg));
+			return part1 + "******@" + part2;
+		}
+		document.write("Email : siddiquimamoon786@gmail.com<br>")
+		document.write("Concealed email : ")
+		document.write(protect_email("siddiquisaad529@gmail.com"));
+	</script>
+</body>
+</html>

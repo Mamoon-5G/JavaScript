@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>20461 Practical</title>
+    <script>
+      var choice, n1, n2, x;
+      do {
+        choice = parseInt(
+          prompt(
+            "What do you want to perform?" +
+              "\n" +
+              "1.Addition \n 2.Subtraction :"
+          )
+        );
+        n1 = parseInt(prompt("Enter First Number: "));
+        n2 = parseInt(prompt("Enter Second Number: "));
+        switch (choice) {
+          case 1:
+            alert("Addition : " + (n1 + n2));
+            break;
+          case 2:
+            alert("Subtraction : " + (n1 - n2));
+            break;
+          default:
+            alert("Invalid Number");
+        }
+        x = parseInt(prompt("Do you want to Continue? \n 1.YES 2.NO"));
+      } while (x == 1);
+    </script>
+  </head>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>20461 Practical</title>
+    </head>
+    <body>
+        <input type="text" id="txt1" value=""><br>
+        <input type="button" id="btn1" value="open" onclick="openchild()">
+        <input type="button" id="btn2" value="send" onclick="sendval()">
+        <script>
+            var popchild;
+            function openchild() {
+                popchild = window.open("child.html", "child window");
+            }
+            function sendval() {
+                if (popchild!=null && !popchild.closed) {
+                    var p = popchild.document.getElementById("p1");
+                    p.innerHTML=document.getElementById("txt1").value;
+                    
+                    popchild.focus();
+                }
+                else {
+                    alert("Child window has been closed.");
+                }
+            }
+        </script>
+    </body>
+</html>

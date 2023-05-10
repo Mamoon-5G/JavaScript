@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>20461 Practical</title>
+    <script>
+        let arr = new Array(61, 67, 09, 34, 19 , 7);
+        document.write("20461 Siddiqui Mamoon<hr>");
+        document.write("array before sorting: ");
+        document.write(arr + "<hr>");
+        document.write("Array after sorting: ");
+        for (var i = 0; i < arr.length; i++) {
+            for (var j = 0; j < (arr.length - i - 1); j++) {
+                if (arr[j] > arr[j + 1]) {
+                    var temp = arr[j]
+                    arr[j] = arr[j + 1]
+                    arr[j + 1] = temp
+                }
+            }
+        }
+        document.write(arr);
+        let rev = arr.reverse();
+        document.write(`<br><hr>In Descending Order ${rev}`)
+    </script>
+<body>
+</body>
+</head>
+</html>

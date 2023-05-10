@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>20461 Practical</title>
+    <script>
+        document.write("20461 Siddiqui Mamoon<hr>");
+        palindrome = (num) => {
+            var temp;
+            temp = num;
+            var n = 0, rev = 0;
+            while (num > 0) {
+                n = num % 10;
+                num = parseInt(num / 10);
+                rev = (rev * 10) + n;
+            }
+            if (rev == temp)
+                document.write(temp + " is a Palindrome");
+            else
+                document.write(temp + " is not a Palindrome");
+        }
+        var num = parseInt(prompt("Enter a Number :"));
+        palindrome(num);
+    </script>
+</head>
+</html>
