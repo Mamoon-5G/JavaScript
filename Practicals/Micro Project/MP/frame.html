@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=fr, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="frame.css">
+</head>
+<script src="https://kit.fontawesome.com/2d399dc2b9.js" crossorigin="anonymous"></script>
+
+<body onload="openTab(event, 'Messages')">
+  <div id="first" class="hero">
+    <nav>
+      <img src="dig.jpg" class="logo" onclick="toggleMenu()" />
+      <span class="span1">Pebbles</span>
+
+      <!-- <ul>
+        <li><a href="#">
+            <em>Home</em>
+          </a></li>
+        <li><a href="#"><em>Feature</em></a></li>
+        <li><a href="#"><em>Contact</em></a></li>
+      </ul> -->
+    </nav>
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'Messages')">
+        Messages
+      </button>
+      <button class="tablinks" onclick="openTab(event, 'Matches')">
+        Matches
+      </button>
+    </div>
+
+    <div id="Messages" class="tabcontent">
+      <img src="ss1.png" alt="Dog" width="350px" />
+    </div>
+
+    <div id="Matches" class="tabcontent">
+      <img src="ss2.png" alt="Dog2" height="300px" width="350px" />
+    </div>
+
+    <div id="drop" class="sub-menu">
+      <button class="btn">Share tinDawwg</button>
+      <button class="btn logout" onclick="logOut()">LogOut</button>
+      <button class="btn">Delete Account</button>
+    </div>
+  </div>
+  <div id="second">
+    <section id="show" onload="showSlides()">
+      <div class="container">
+        <div class="mySlides">
+          <div class="slideContent">
+            <img src="dog-img.jpg" alt="">
+          </div>
+        </div>
+
+        <div class="mySlides">
+          <div class="slideContent">
+            <img src="dog-2.jpg" alt="">
+          </div>
+        </div>
+
+        <div class="mySlides">
+          <div class="slideContent">
+            <img src="dog-3.jpg" alt="">
+          </div>
+        </div>
+
+        <div class="mySlides">
+          <div class="slideContent">
+            <img src="dog-4.jpg" alt="">
+          </div>
+        </div>
+
+        <div class="mySlides">
+          <div class="slideContent">
+            <img src="dog-5.jpg" alt="">
+          </div>
+        </div>
+
+        <div class="mySlides">
+          <div class="slideContent">
+            <img src="dog-6.jpg" alt="">
+          </div>
+        </div>
+
+        <div class="mySlides">
+          <div class="slideContent">
+            <img src="dog-7.jpg" alt="">
+          </div>
+        </div>
+
+        <div class="mySlides">
+          <div class="slideContent">
+            <img src="dog-8.jpg" alt="">
+          </div>
+        </div>
+
+        <div class="mySlides">
+          <div class="slideContent">
+            <img src="dog-9.jpg" alt="">
+          </div>
+        </div>
+
+        <div class="mySlides">
+          <div class="slideContent">
+            <img src="snoop_dog.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="selection">
+      <button class="next" onclick="plusSlides(-1)">X</button>
+      <!-- <i class="fa-regular fa-heart choose" onclick="choosesB()"></i> -->
+      <button class="fa-solid fa-heart prev choose" onclick="plusSlides(1)"></button>
+    </div>
+    <!-- <a class="prev" onclick="plusSlides(1)">X</a> -->
+  </div>
+  <footer id="footer">
+    <i class="fa-brands fa-facebook-f media"></i>
+    <i class="fa-brands fa-twitter media"></i>
+    <i class="fa-brands fa-instagram media"></i>
+    <i class="fa-solid fa-envelope media"></i>
+    <p>© Copyright tinDawwg</p>
+    <p>Made by Group</p>
+  </footer>
+</body>
+<script>
+  function toggleMenu() {
+    document.getElementById("drop").classList.toggle("show");
+  }
+
+  function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "grid";
+    evt.currentTarget.className += " active";
+  }
+  function logOut() {
+    alert("Are you really want to Log Out");
+    window.location.href = "index_1.html";
+  }
+  function preventBack() {
+    window.history.forward();
+  }
+  setTimeout("preventBack()", 0);
+  window.onunload = function () {
+    null;
+  };
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    //   var captionText = document.getElementById("caption");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    //   dots[slideIndex-1].className += " active";
+    //   captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+</script>
+
+</html>

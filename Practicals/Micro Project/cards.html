@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Document</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		
+		/* Float four columns side by side */
+		.column {
+			float: left;
+			width: 33.333%;
+			padding: 0 10px;
+		}
+		
+		/* Remove extra left and right margins, due to padding */
+		.row {
+			margin: 0 -5px;
+			padding: 12px 18px;
+		}
+		
+		/* Clear floats after the columns */
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+		
+		/* Responsive columns */
+		@media screen and (max-width: 600px) {
+			.column {
+				width: 100%;
+				display: block;
+				margin-bottom: 20px;
+			}
+		}
+		
+		.btn1{
+			padding: 8px;
+    		font-size: 1.2rem;
+    		border-radius: 10px;
+    		cursor: pointer;
+    		margin: 10px;
+		}
+
+		.btn2{
+			padding: 8px;
+    		font-size: 1.2rem;
+    		border-radius: 10px;
+    		cursor: pointer;
+    		margin: 10px;
+			background-color: black;
+    		color: white;
+		}
+
+		.btn1:hover{
+			cursor: pointer;
+		}
+
+		.btn2:hover{
+			cursor: pointer;
+		}
+
+		/* Style the counter cards */
+		.card {
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+			padding: 16px;
+			text-align: center;
+			background-color: #ef8172;
+		}
+	</style>
+</head>
+
+<body>
+
+	<h2>Responsive Column Cards</h2>
+	<p>Resize the browser window to see the effect.</p>
+
+	<div class="row">
+		<div class="column">
+			<div class="card">
+				<h1>Chihuahua</h1><hr>
+				<h2>Free</h2>
+				<p>5 Matches Per Day</p>
+				<p>10 Message Per Day</p>
+				<p>Unlimted App Usage</p>
+				<button type="button" class="btn1">Sign Up For Free</button>
+			</div>
+		</div>
+
+		<div class="column">
+			<div class="card">
+				<h1>Labrador</h1><hr>
+				<h2>$49/Month</h2>
+				<p>Unlimited Matches Per Day</p>
+				<p>Unlimited Message Per Day</p>
+				<p>Unlimted App Usage</p>
+				<button type="button" class="btn2">Sign Up</button>
+			</div>
+		</div>
+
+		<div class="column">
+			<div class="card">
+				<h1>Mastiff</h1><hr>
+				<h2>$99/Month</h2>
+				<p>Priority Listing</p>
+				<p>Unlimited Matches Per Day</p>
+				<p>Unlimited Message Per Day</p>
+				<p>Unlimted App Usage</p>
+				<button type="button" class="btn2">Sign Up</button>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

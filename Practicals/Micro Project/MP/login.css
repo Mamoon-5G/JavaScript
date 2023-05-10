@@ -1,0 +1,117 @@
+.logincontainer {
+	background: rgba(0, 0, 0, 0.6);
+  display: none;
+  place-items: center;
+  box-sizing: border-box;
+  min-height: 110vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  transition: transform 0.4s;
+  z-index: 1;
+}
+.logincontainer .login {
+  display: block;
+  margin: auto;
+  max-width: 600px;
+  min-height: 400px;
+  text-align: center;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7),
+    -2px -2px 3px rgba(255, 255, 255, 0.2);
+  background: #fff;
+  border-radius: 20px;
+  z-index: 1;
+  position: fixed;
+}
+.logincontainer h2 {
+  text-align: center;
+  margin: 30px 0px;
+  font-size: 27px;
+  color: #ff4c68;
+  font-family: "Montserrat", sans-serif;
+}
+.logincontainer h5 {
+  height: 20px;
+  width: 400px;
+  margin: 0px 25px;
+  color: #ff4c68;
+}
+#username,
+#pass {
+  height: 50px;
+  min-width: 350px;
+  /* outline: none; */
+  background: transparent;
+  padding: 10px 20px;
+  border: 3px solid #ff4c68;
+  /* border-bottom: 3px solid #ff4c68; */
+  font-size: 18px;
+  border-radius: 10px;
+  display: block;
+  margin: 10px auto;
+  color: #ff4c68;
+}
+#username:focus,
+#pass:focus{
+  border: 3px solid #ff4c68;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+.input-field {
+  position: relative;
+}
+.input-field i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 23px;
+  transition: all 0.2s ease;
+}
+.input-field i.icon {
+  left: 0;
+}
+
+.input-field i.showHidePw {
+  right: 0;
+  cursor: pointer;
+  padding: 10px;
+}
+.logincontainer .b1 {
+  height: 50px;
+  min-width: 350px;
+  border: 3px solid #ff4c68;
+  /* outline: none; */
+  /* background: transparent; */
+  border-bottom: 3px solid #ff4c68;
+  padding: 0px 20px;
+  font-size: 20px;
+  display: block;
+  margin: auto;
+  cursor: pointer;
+  font-weight: 600;
+  color: #020202;
+  font-family: "Montserrat-Bold", sans-serif;
+  border-radius: 10px;
+  background-color: #ff4c68;
+}
+.showP {
+  cursor: pointer;
+  margin: 0 0% 0 75%;
+}
+.b1:hover {
+  background-color: #000000;
+  color: #ff4c68;
+  border: 3px solid #000;
+  transition: all 0.2s ease;
+  border-radius: 10px;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.close {
+  position: absolute;
+  top: 1%;
+  right: 1.5%;
+  cursor: pointer;
+  border-radius: 100%;
+}

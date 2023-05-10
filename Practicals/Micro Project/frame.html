@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=fr, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    margin: 0%;
+    padding: 0%;
+  }
+
+  #first {
+    margin: 0%;
+    padding: 0%;
+    min-height: 100%;
+    max-width: 25%;
+    background-color: #fff;
+    float: left;
+  }
+
+  #second {
+    margin-left: 25%;
+    padding: 0%;
+    min-height: 100%;
+    max-width: 75%;
+    background-color: #eceaff;
+  }
+
+  nav {
+    background-color: #ff4c68;
+    min-width: 25%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .logo {
+    min-width: 50px;
+    height: 50px;
+    margin: 10px;
+    padding: 10;
+    object-fit: cover;
+    object-position: 25%, 25%;
+    border-radius: 30px;
+  }
+
+  nav ul {
+    width: 100%;
+    text-align: right;
+  }
+
+  nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+  }
+
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .match {
+    margin: 10px 10px;
+    padding: 0;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    display: inline-block;
+  }
+
+  .lap {
+    width: 600px;
+    height: 450px;
+
+    margin: 100px 100px;
+    /* margin-left: 250px; */
+    object-position: 25% 25%;
+  }
+
+  .sub-menu {
+    display: none;
+    position: absolute;
+    top: 11%;
+    right: 85%;
+    width: 15%;
+    height: 200px;
+    background-color: #eceaff;
+    transition: max-height 0.5s;
+  }
+
+  .submenu2 {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #faf7f7;
+    margin-left: 40%;
+  }
+
+  .log {
+    width: 15%;
+    height: 15px;
+  }
+  .show{
+    display: block;
+  }
+</style>
+<script>
+  function toggleMenu() {
+    document.getElementById("drop").classList.toggle("show")
+  }
+
+</script>
+<body>
+  <div id="first" class="hero">
+    <nav>
+      <img src="dig.jpg" class="logo" onclick="toggleMenu()">
+      <ul>
+        <li><a href="#">
+            <em>Home</em>
+          </a></li>
+        <li><a href="#"><em>Feature</em></a></li>
+        <li><a href="#"><em>Contact</em></a></li>
+      </ul>
+    </nav>
+    <p class="match"><em>Matches</em></p>
+    <p class="match"><em>Messages</em></p>
+    <div id="drop" class="sub-menu">
+    </div>
+  </div>
+  </div>
+  <div id="second">
+    <img src="lap.png" class="lap">
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link rel="stylesheet" href="login.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+    body {
+      display: grid;
+      place-items: center;
+      height: 100vh;
+      background: linear-gradient(#ff4c68, #FFAF98)
+    }
+    .container {
+      display: block;
+      margin: auto;
+      height: 450px;
+      min-width: 460px;
+      box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7),
+      -2px -2px 3px rgba(255, 255, 255, 0.2);
+      background:	#FFF;
+      border-radius: 20px;
+    }
+    .login {
+      height: fit-content;
+      width: 350px;
+      display: block;
+      margin: auto;
+    }
+    .container h2 {
+      text-align: center;
+      margin: 30px 0px;
+      font-size: 27px;
+      color: #ff4c68;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .container h5 {
+      height: 20px;
+      width: 400px;
+      margin: 0px 25px;
+      color: #ff4c68;
+    }
+    #username,
+    #pass {
+      height: 50px;
+      min-width: 350px;
+      outline: none;
+      background: transparent;
+      padding: 10px 20px;
+      border : none;
+      border-bottom: 3px solid #ff4c68;
+      font-size: 18px;
+      display: block;
+      margin: auto;
+      color: #ff4c68;
+    }
+    #username:focus,#pass:focus{
+      border: 3px solid #ff4c68;
+      border-radius: 10px;
+      transition: all 0.2s ease-in-out;
+    }
+    .container .b1 {
+      height: 50px;
+      min-width: 350px;
+      border: none;
+      outline: none;
+      background: transparent;
+      border-bottom: 3px solid #ff4c68;
+      padding: 0px 20px;
+      font-size: 20px;
+      display: block;
+      margin: auto;
+      cursor: pointer;
+      font-weight: 600;
+      color: #ff4c68;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .show {
+      cursor: pointer;
+      margin: 0 20% 0 95%;
+    }
+    .b1:hover {
+      color: #01013b;
+      background-color: #ff4c68;
+      border: 3px solid #000;
+      transition: all 0.2s ease-in-out;
+      border-radius: 10px;
+    }
+  </style>
+  <body>
+    <!-- <div class="imgcontainer">
+    <img src="https://cdn-icons-png.flaticon.com/512/8777/8777705.png" alt="Avatar" class="avatar">
+  </div> -->
+    <div class="container"> 
+      <div class="login">
+        <h2><u>LOGIN FORM</u></h2>
+        <!-- <label for="uname"><b>Username</b></label> -->
+        <input
+        type="text"
+        placeholder="Enter Username"
+        name="uname"
+        id="username"
+          />
+        <h5 class="u_msg"></h5>
+        <!-- <label for="psw"><b>Password</b></label> -->
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="psw"
+          id="pass"
+        />
+        <span class="show" id="show" onclick="show()">👀</span>
+        <h5 class="p2"></h5>
+        <input type="submit" class="b1" value="LOGIN" />
+      </div>
+    </div>
+  </body>
+  <script>
+    let uname = document.getElementById("username");
+    let pwd = document.getElementById("pass");
+    let msg = document.querySelector(".p2");
+    let btn = document.querySelector(".b1");
+    let msg1 = document.querySelector(".u_msg");
+    function show() {
+      let shwPwd = document.getElementById("pass");
+      let eye = document.getElementById("show");
+      if (shwPwd.type === "password") {
+        shwPwd.type = "text";
+        eye.innerText = "👁️";
+      } else {
+        shwPwd.type = "password";
+        eye.innerText = "👀";
+      }
+    }
+    btn.addEventListener("click", function () {
+      if (uname.value === "" || pwd.value === "") {
+        msg1.innerText = "Please Enter Username & Password";
+        msg1.style.color = "	#FFD700"
+        msg.innerText = "";
+      } else if (uname.value === "ab" && pwd.value === "ab01") {
+        msg.innerText = "Login successful";
+        msg.style.color = "rgb(72,255,0)";
+        msg1.innerText = "";
+        window.location.href = "index_1.html"
+      } else {
+        msg.innerText = "Please enter correct username & password!!";
+        msg.style.color = "#da3400";
+        msg1.innerText = "";
+      }
+    });
+  </script>
+  <!-- <script src="login.js"></script> -->
+</html>

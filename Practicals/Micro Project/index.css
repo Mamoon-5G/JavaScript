@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Ubuntu&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Montserrat;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#title {
+  min-height: fit-content;
+  background-color: #ff4c68;
+  min-width: 100%;
+}
+
+.container-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0% 9%;
+}
+
+/* Nav Bar */
+.nav {
+  display: flex;
+  padding-right: 100px;
+}
+
+.nav-item {
+  padding: 0px 18px;
+}
+
+.navbar-brand {
+  font-family: Ubuntu;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul {
+  height: 3vh;
+  min-width: 85vw;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  list-style: none;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Row */
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+.row-left {
+  padding: 5% 13%;
+  font-family: "Montserrat-Black", sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.5;
+}
+.download {
+  padding: 18px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 15px;
+}
+.apple {
+  background-color: black;
+  color: white;
+}
+.iphone {
+  transform: rotate(23deg);
+  padding-right: 200px;
+  margin-top: 80px;
+}
+
+/* features */
+.feature-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#features {
+  padding: 7% 3%;
+}
+
+#features h3 {
+  /* font-family: ubuntu; */
+  line-height: 1em;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+#features i {
+  height: 35px;
+  color: #ef8172;
+  margin-bottom: 0.8em;
+}
+
+#features p {
+  line-height: 1.5em;
+}
+
+.feature {
+  text-align: center;
+}
+
+#features i:hover {
+  color: #ff4c68;
+}
+#show .container {
+  font-family: "Montserrat-Bold";
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  min-width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: 0.3s all ease-in-out;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+.slideContent {
+  display: grid;
+  min-width: 100%;
+  min-height: 80vh;
+  background: #ef7f73;
+  place-items: center;
+}
+.slideContent h2 {
+  max-width: 70%;
+  color: #fff;
+  text-align: center;
+  font-size: 3rem;
+}
+.slideContent img {
+  max-width: 170px;
+  min-height: 170px;
+  border-radius: 100%;
+}
+/* Cards */
+.column {
+  float: left;
+  width: 33.333%;
+  padding: 0 10px;
+  margin: 1.5rem 0;
+}
+.column h2,h3 {
+    font-family: "Montserrat-Bold";
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+
+/* Remove extra left and right margins, due to padding */
+.cardrow {
+  margin: 0 -5px;
+  padding: 12px 18px;
+  text-align: center;
+}
+.cardrow h2,h3 {
+    font-family: "Montserrat-Bold";
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.cardrow .column h1{
+  background-color: #f7f7f7;
+}
+/* Clear floats after the columns */
+.cardrow::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    min-width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .row-right img{
+    display: block;
+  }
+}
+
+.btn1{
+  padding: 8px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.btn2{
+  padding: 8px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px;
+  background-color: black;
+    color: white;
+}
+
+.btn1:hover{
+  cursor: pointer;
+}
+
+.btn2:hover{
+  cursor: pointer;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: larger;
+  padding: 16px;
+  text-align: center;
+  background-color: #fff;
+  min-height: 300px;
+  line-height: 1.5;
+}
+#cta {
+  background-color: #ff4c68;
+  text-align: center;
+  color: #fff;
+  padding: 10% 15%;
+}
+
+#cta h3 {
+  padding-bottom: 3%;
+  font-size: 4em;
+  font-family: "Ubuntu";
+  line-height: 1.3em;
+}
+
+#cta button {
+  margin: 2%;
+}
+
+#footer {
+  text-align: center;
+  min-width: 100%;
+  margin: 50px 0;
+  line-height: 1.5;
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="login.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <title>tinDawwg</title>
+  <link rel="shortcut icon" href="https://sai-23.github.io/tindawwg/favicon.ico" type="image/x-icon" />
+</head>
+<script src="https://kit.fontawesome.com/2d399dc2b9.js" crossorigin="anonymous"></script>
+
+<body onload="showSlides()" class="bdy">
+  <section id="title">
+    <div class="container-fluid">
+      <nav>
+        <a class="navbar-brand">tinDawwg</a>
+        <ul>
+          <li class="nav-item">
+            <a class="nav-link" href="#footer">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#pricing">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#cta">Download</a>
+          </li>
+          <button class="login1"><i class="fa fa-fire"></i> Login </button>
+        </ul>
+      </nav>
+    </div>
+    <!-- /* LOGIN Form */ -->
+    <div class="logincontainer">
+      <div class="login">
+        <h2>LOGIN</h2>
+        <p>Please Login to continue</>
+          <!-- <label for="uname"><b>Username</b></label> -->
+        <div class="close">
+          <img src="close.png" alt="" height="30px">
+        </div>
+        <div class="input-field">
+          <input type="text" placeholder="Enter Username" name="uname" id="username" />
+        </div>
+        <h5 class="u_msg"></h5>
+        <div class="input-field">
+          <input type="text" placeholder="Enter Password" name="psw" id="pass" />
+          <i class="uil uil-lock icon"></i>
+          <i class="fa fa-eye showP icon" onclick="show()"></i>
+        </div>
+        <!-- <label for="psw"><b>Password</b></label> -->
+        <h5 class="p2"></h5>
+        <input type="submit" class="b1" value="LOGIN" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="row-left">
+        <h1>Meet new and interesting dogs nearby.</h1>
+        <button type="button" class="download apple">
+          <i class="fa-brands fa-apple"></i> Download
+        </button>
+        <button type="button" class="download android">
+          <i class="fa-brands fa-google-play"></i> Download
+        </button>
+      </div>
+      <div class="row-right">
+        <img src="iphone6.png" height="600px" class="iphone" alt="iphone-mockup" />
+      </div>
+    </div>
+  </section>
+
+  <!-- feature -->
+  <section id="features">
+    <div class="feature-container">
+      <div class="feature f1">
+        <i class="fa-solid fa-circle-check fa-4x"></i>
+        <h3>Easy to use.</h3>
+        <p>So easy to use, even your dog could do it.</p>
+      </div>
+      <div class="feature f2">
+        <i class="fa-solid fa-bullseye fa-4x"></i>
+        <h3>Elite Clientele</h3>
+        <p>We have all the dogs, the greatest dogs.</p>
+      </div>
+      <div class="feature f3">
+        <i class="fa-solid fa-heart fa-4x"></i>
+        <h3>Guaranteed to work.</h3>
+        <p>Find the love of your dog's life or your money back.</p>
+      </div>
+    </div>
+  </section>
+  <section id="show" onload="showSlides()">
+    <div class="container">
+      <div class="mySlides">
+        <div class="slideContent">
+          <h2>
+            I no longer have to sniff other dogs for love. I've found the
+            hottest Corgi on tinDawwg. Woof.
+          </h2>
+          <img src="dog-img.jpg" alt="">
+          <em class="em1">Pebbles, NewYork</em>
+        </div>
+      </div>
+
+      <div class="mySlides">
+        <div class="slideContent">
+          <h2 class="testimonial-text">
+            My dog used to be so lonely, but with tinDawwg's help, they've
+            found the love of their life. I think.
+          </h2>
+          <img src="lady-img.jpg" alt="">
+          <em class="em1">Illionis, Beverly</em>
+        </div>
+      </div>
+      <!-- <a class="prev" onclick="plusSlides(-1)"></a>
+      <a class="next" onclick="plusSlides(1)"></a> -->
+    </div>
+  </section>
+  <section id="pricing">
+    <div class="cardrow">
+      <h2>A Plan for Every Dog's Needs</h2>
+      <p>Simple and affordable price plans for your and your dog.</p>
+      <div class="column">
+        <div class="card">
+          <h1>Chihuahua</h1>
+          <hr>
+          <h2>Free</h2>
+          <p>5 Matches Per Day</p>
+          <p>10 Message Per Day</p>
+          <p>Unlimted App Usage</p>
+          <button type="button" class="btn1">Sign Up For Free</button>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <h1>Labrador</h1>
+          <hr>
+          <h2>$49/Month</h2>
+          <p>Unlimited Matches Per Day</p>
+          <p>Unlimited Message Per Day</p>
+          <p>Unlimted App Usage</p>
+          <button type="button" class="btn2">Sign Up</button>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <h1>Mastiff</h1>
+          <hr>
+          <h2>$99/Month</h2>
+          <p>Priority Listing</p>
+          <p>Unlimited Matches Per Day</p>
+          <p>Unlimited Message Per Day</p>
+          <p>Unlimted App Usage</p>
+          <button type="button" class="btn2">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="cta">
+    <h3>Find the True Love of Your Dog's Life Today.</h3>
+    <button type="button" class="download apple">
+      <i class="fa-brands fa-apple"></i> Download
+    </button>
+    <button type="button" class="download android">
+      <i class="fa-brands fa-google-play"></i> Download
+    </button>
+  </section>
+  <footer id="footer">
+    <i class="fa-brands fa-facebook-f media"></i>
+    <i class="fa-brands fa-twitter media"></i>
+    <i class="fa-brands fa-instagram media"></i>
+    <i class="fa-solid fa-envelope media"></i>
+    <p>© Copyright tinDawwg</p>
+    <p>Made by Group</p>
+  </footer>
+</body>
+<script src="script.js"></script>
+<script src="login.js"></script>
+
+</html>
